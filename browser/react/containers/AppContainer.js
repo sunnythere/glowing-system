@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+
 import initialState from '../initialState';
 import AUDIO from '../audio';
 
@@ -118,6 +119,7 @@ export default class AppContainer extends Component {
               currentSong: this.state.currentSong,
               isPlaying: this.state.isPlaying,
               toggle: this.toggleOne,
+
 
               // Albums (plural) component's props
               albums: this.state.albums,
