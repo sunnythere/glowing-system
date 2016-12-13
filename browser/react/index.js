@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, hashHistory, IndexRedirect } from 'react-router';
-import AppContainer from './containers/AppContainer';
+import { Router, Route, hashHistory, IndexRedirect, Link } from 'react-router';
 import Albums from './components/Albums';
+import Album from './components/Album';
 
 ReactDOM.render(
   <Router history={hashHistory}>

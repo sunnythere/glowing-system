@@ -1,10 +1,18 @@
 import React from 'react';
+import {Link} from 'react-router';
 
-const Albums = (props) => {
+
+class Albums extends React.Component {
+
+constructor(props) {
+  super(props);
 
   const albums = props.albums;
   const selectAlbum = props.selectAlbum;
 
+}
+
+render() {
   return (
     <div>
       <h3>Albums</h3>
@@ -12,21 +20,26 @@ const Albums = (props) => {
       {
         albums.map(album => (
           <div className="col-xs-4" key={ album.id }>
-            <a className="thumbnail" href="#" onClick={() => selectAlbum(album.id)}>
-              <img src={ album.imageUrl } />
+
+            <Link to={`/albums/${this.props.albumId}`}>
+
+            <img src={ album.imageUrl } />
               <div className="caption">
                 <h5>
                   <span>{ album.name }</span>
                 </h5>
                 <small>{ album.songs.length } songs</small>
               </div>
-            </a>
+
+            </Link>
           </div>
         ))
       }
       </div>
     </div>
   );
+}
+
 }
 
 export default Albums;
